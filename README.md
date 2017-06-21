@@ -11,5 +11,5 @@ Mantenha sua respostas nesse branch e **sob-nenhuma-hipótese-caso-contrario-um-
 
 Após conclusão de suas missões faça um pull request e proderemos avaliar seu desempenho na jornada.
 
-Boa sorte, aventureiro!
-May The 4th be with you. 
+Boa sorte, aventureiro.
+**May The 4th be with you!**
