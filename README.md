@@ -1,7 +1,7 @@
 # NEWBIES
 Repositório de submissão das questões de seleção para o grupo Guardians
 
-<h1>Greetings, challanger!</h1>
+<h1>Greetings, challenger!</h1>
 
 Neste repositório você encontrará as quest-ões necessárias para que possa ser admitido em nossa guilda. 
 Deverás criar um branch a parte desse repositório.
