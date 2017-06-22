@@ -13,4 +13,4 @@ Após conclusão de suas missões faça um pull request e poderemos avaliar seu 
 Boa sorte, aventureiro.
 **May The 4th be with you!**
 
-P.S: conteúdo útil [aqui](https://drive.google.com/drive/folders/0B_GydWLdj9t-OHY1RjJXeWllUEU)
+**P.S**: conteúdo útil [aqui](https://drive.google.com/drive/folders/0B_GydWLdj9t-OHY1RjJXeWllUEU).
