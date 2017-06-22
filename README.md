@@ -1,7 +1,7 @@
 <h1>Greetings, challenger!</h1>
 
 Neste repositório você encontrará as quest-ões necessárias para que possa ser admitido em nossa guilda. Faça quantas achar necessário.
-Deverás criar um fork e então uma pasta com sua matricula em `/respostas/NUM_MATRICULA`.
+Deverás criar um fork e então uma pasta com sua matricula em `/respostas/LOGI_CCC`.
 
 Se não sabes como criar um fork és indigno! Dê meia volta e desista.
 (Ou cliques [aqui](http://pythonclub.com.br/como-fazer-fork-clone-push-pull-request-no-github.html) e aprendas).
