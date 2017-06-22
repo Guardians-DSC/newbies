@@ -1,5 +1,7 @@
 # Questao 1
 
+Escreva um programa, em Shell Script, que:
+
 1. Descompacte o arquivo jan_95.txt.gz.
 
 2. Considere que o formato do arquivo é como se segue: ```ORIGEM - - DATA “AÇÃO” STATUS TAMANHO```
