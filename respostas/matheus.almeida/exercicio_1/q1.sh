@@ -1,4 +1,7 @@
 #!/bin/bash
+# Matheus da Cunha Melo Almeida - 115210030
+# exercicio_1
+
 cp ../../../questoes/exercicio_1/jan_95.txt.gz ./
 gzip -d jan_95.txt.gz
 
