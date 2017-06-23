@@ -1,0 +1,22 @@
+#!/bin/bash
+# José Ramon Fragoso da Silva
+# exercicio_1 - Script para a resolucao dos exercicios dos guardians.
+
+# Copio o arquivo compactada para o diretorio local
+cp ../../../questoes/exercicio_1/jan_95.txt.gz ./
+
+# Descompacto o arquivo jan_95.txt
+gzip -d jan_95.txt.gz
+
+# Utilizo o sed para criar um novo arquivo "requisicoes_validas.txt" onde 
+# nesse arquivo contem apenas as linhas corretas
+sed '/ - - /!d' jan_95.txt > requisicoes_validas.txt
+
+# Agora crio duas variaveis para armazenar a quantidade de processos local e remote
+# utilizando o grep
+qtdRemote=`grep -wc remote requisicoes_validas.txt`
+qtdLocal=`grep -wc local requisicoes_validas.txt`
+
+# Por fim imprime as variaveis.
+echo "Quantidade de processos local: $qtdLocal"
+echo "Quantidade de processos remote: $qtdRemote"
