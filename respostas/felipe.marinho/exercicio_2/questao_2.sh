@@ -1,4 +1,5 @@
 #!/bin/bash
+# Felipe Vasconcelos Marinho - 116110223 - <felipe.marinho@ccc.ufcg.edu.br>
 
 if [[ $# < 3 ]]; then
 	echo "Quantidade de parâmetros inválida!"

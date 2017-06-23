@@ -1,4 +1,8 @@
 #!/bin/bash 
+# Felipe Vasconcelos Marinho - 116110223 - <felipe.marinho@ccc.ufcg.edu.br>
+
+# Copiando o arquivo para o diretorio local.
+cp ../../../questoes/exercicio_1/jan_95.txt.gz ./
 
 # Descomprimindo o arquivo .txt.gz
 gunzip jan_95.txt.gz
