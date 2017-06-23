@@ -1,5 +1,11 @@
 #!/bin/bash
 
+if [[ $# < 3 ]]; then
+	echo "Quantidade de parâmetros inválida!"
+	echo -e "Você deve informar $0 [N_VEZES] [SEGUNDOS] [P_USER]\n"
+	kill $$
+fi
+
 N=$1
 SEG=$2
 P_USER=$3
