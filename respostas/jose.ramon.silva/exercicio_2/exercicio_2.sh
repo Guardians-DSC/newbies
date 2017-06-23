@@ -3,13 +3,13 @@
 # exercicio_2 -  Script exemplo de reposta para as questoes dos guardians.
 ###############################################################################################################
 
-read N		# Le a quantidade de vezes que vai repetir
-read S 		# Le o tempo
+read N # Le a quantidade de vezes que vai repetir
+read S # Le o tempo
 read P_USER	# Le o usuario
 
 for i in `seq 1 $N`	# Repete N vezes
 do
-	sleep "$S"		# Delay  de S segundos para executar os proximos comandos
+	sleep "$S" # Delay  de S segundos para executar os proximos comandos
 	ps -ef | grep "$P_USER" >> processos.txt # Lista todos os processos que contem a string P_USER e armazena em um arquivo processos.txt
 
 done
@@ -19,22 +19,22 @@ done
 cat processos.txt | awk '{print $3}' > cpu_processos.txt # Lista todos os processos de CPU em processos.txt e armazena em outro arquivo
 cat processos.txt | awk '{print $4}' > mem_processos.txt # Lista todos os processos de MEM em processos.txt e armazena em outro arquivo
 
-maiorcpu=0	# Variavel para ser armazenado o maior %CPU
-menorcpu=`sed -n "1p" cpu_processos.txt `	# Variavel para ser armazenado o menor %CPU
+maiorcpu=0 # Variavel para ser armazenado o maior %CPU
+menorcpu=`sed -n "1p" cpu_processos.txt ` # Variavel para ser armazenado o menor %CPU
 
-while read linha	# Loop que ir ler cada linha do arquivo cpu_processos.txt 
+while read linha # Loop que ir ler cada linha do arquivo cpu_processos.txt 
 do
 	if [[ $linha -gt $maiorcpu ]]; then	# Parte responsavel por armazenar os maiores valores encontrados na variavel maiorcpu
 	 	maiorcpu=$linha;
 	 fi 
 
-	 if [[ $linha -lt $menorcpu ]]; then	# Parte responsavel por armazenar os menores valores encontrados na variavel menorcpu
+	 if [[ $linha -lt $menorcpu ]]; then # Parte responsavel por armazenar os menores valores encontrados na variavel menorcpu
 	 	menorcpu=$linha
 	 fi
 
 done < cpu_processos.txt
 
-maiormem=0	# Repeticao de tudo o que foi feito com %CPU, mas agora utilizando o %MEM
+maiormem=0 # Repeticao de tudo o que foi feito com %CPU, mas agora utilizando o %MEM
 menormem=`sed -n "1p" mem_processos.txt `
 
 while read linha
