@@ -5,7 +5,7 @@
 cp ../../../questoes/exercicio_3/ls.log ./
 
 # Limpeza da saída retirando infomações desnecessárias para o processamento.
-PENTE_FINO=`cat ls.log | sed 's/(.*= / /g;s/\(<\|>\)//g;$d' | sed '$d' | awk '{print $1 " " $2 " " $NF}'`
+PENTE_FINO=`cat ls.log | grep -E ".*(.*) = .* <.*>" | sed 's/(.*= / /g;s/\(<\|>\)//g;$d' | sed '$d' | awk '{print $1 " " $2 " " $NF}'`
 
 echo "===== 3 CHAMADAS DE MAIOR DURAÇÃO ====="
 # As 3 syscalls mais longas seguindo o critério de duração.
