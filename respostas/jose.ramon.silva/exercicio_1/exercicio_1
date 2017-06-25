@@ -1,6 +1,12 @@
 #!/bin/bash
-# José Ramon Fragoso da Silva
-# exercicio_1 - Script para a resolucao dos exercicios dos guardians.
+#
+# José Ramon Fragoso da Silva - 116210412
+#
+# jose.ramon.silva@ccc.ufcg.edu.br
+#
+# exercicio_1 -  Script exemplo de reposta para as questoes dos guardians.
+#
+###############################################################################################################
 
 # Copio o arquivo compactada para o diretorio local
 cp ../../../questoes/exercicio_1/jan_95.txt.gz ./
