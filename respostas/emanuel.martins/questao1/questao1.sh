@@ -12,5 +12,7 @@ egrep -E '(local|remote) - -' jan_95.txt > file_filtered.txt
 LOCAL_REQUISITIONS=$(egrep -E '^local' file_filtered.txt | wc -l)
 REMOTE_REQUISITIONS=$(egrep -E '^remote' file_filtered.txt | wc -l)
 
+echo "Processamento das requisições."
+echo ""
 echo "Quantidade de requisições locais: $LOCAL_REQUISITIONS"
 echo "Quantidade de requisições remotas: $REMOTE_REQUISITIONS"
