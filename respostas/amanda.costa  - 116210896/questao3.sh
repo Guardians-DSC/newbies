@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Amanda Vivial Alves de Luna e Costa - 116210896
+# Amanda Vivian Alves de Luna e Costa - 116210896
 # Resposta ao exercicio 3
 
 # Criando um arquivo com as Syscalls.
