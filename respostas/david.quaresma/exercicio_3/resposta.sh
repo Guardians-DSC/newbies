@@ -8,8 +8,8 @@ cp ../../../questoes/exercicio_3/ls.log ./
 # Converto o .log em .txt
 cat ls.log > ls.txt
 
-# Com base nos padrões anteriores das linhas anteiores, o conteúdo dessas 3 linhas (91,92,93)
-# Deveriam estar em uma única linha. Assim, vou elimina-las. 
+# Com base nos padrões das linhas anteriores, o conteúdo dessas 3 linhas (91,92,93)
+# Deveriam estar em uma única linha. Assim, considerarei isto como erro e vou elimina-las. 
 sed -i '91d' ls.txt
 sed -i '91d' ls.txt
 sed -i '91d' ls.txt
@@ -28,7 +28,7 @@ cat ls_validos.txt | cut -d"(" -f1 > syscall.txt
 # Uno os dois arquivos em outro concatenando linha por linha. 
 paste time.txt syscall.txt > time_syscall.txt
 
-# Ordeno do invertido guardando em outro arquivo.
+# Ordeno invertido guardando em outro arquivo.
 sort -r time_syscall.txt > time_syscall_ordenado.txt
 
 # Guardo em variáveis as maiores syscall.
