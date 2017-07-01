@@ -8,20 +8,20 @@ cp ../../../questoes/exercicio_1/jan_95.txt.gz ./
 # Descompacto o arquivo com o comando gunzip -k, onde o -k evita que o gunzip apague o .gz inicial.
 gunzip -k jan_95.txt.gz
 
-# salvo as linhas com os padrões desejados em outro arquivo.
+# Salvo as linhas com os padrões desejados em outro arquivo.
 sed '/ - - /!d'  jan_95.txt > jan_valido.txt
 
-# crio contadores.
+# Crio contadores.
 remotecount=0
 localcount=0
 
-#leio o novo arquivo linha por linha.
+# Leio o novo arquivo linha por linha.
 while read line; do
 
-    # verifico se a linha contém o padrao de interesse.
+    # Verifico se a linha contém o padrao de interesse.
     if echo "$line" | egrep 'remote' >/dev/null; then
 
-	# incremento 1 na variável que contabiliza as repetições desse padrão. 
+	# Incremento 1 na variável que contabiliza as repetições desse padrão. 
 	remotecount=$((remotecount+1))
     
     elif echo "$line" | egrep 'local' >/dev/null; then 
@@ -30,7 +30,7 @@ while read line; do
 
 done < jan_valido.txt
 
-# exibo os resultados. 
+# Exibo os resultados. 
 echo $remotecount 'requisições remotas realizadas'
 echo $localcount 'requisições locais realizadas'
 
