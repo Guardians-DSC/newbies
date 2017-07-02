@@ -4,10 +4,10 @@
 
 
 #Copiando o arquivo compactado para o diretorio
-cp ../../questoes/exercicio_1/jan_95.txt.gz ./
+cp ../../../questoes/exercicio_1/jan_95.txt.gz ./
 
 #Descompactando o arquivo
-gzip -d jan_95.txt.gz
+gunzip -d jan_95.txt.gz
 
 #Salvo as linhas válidas que contem os dois traços em um novo arquivo txt
 #Sempre atualizando o mesmo arquivo
