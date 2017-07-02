@@ -1,0 +1,12 @@
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory) <0.000055>
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory) <0.000015>
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory) <0.000011>
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory) <0.000011>
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory) <0.000012>
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory) <0.000012>
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory) <0.000011>
+statfs("/sys/fs/selinux", 0x7ffdaf88d7e0) = -1 ENOENT (No such file or directory) <0.000021>
+statfs("/selinux", 0x7ffdaf88d7e0)      = -1 ENOENT (No such file or directory) <0.000011>
+access("/etc/selinux/config", F_OK)     = -1 ENOENT (No such file or directory) <0.000013>
+ioctl(1, TCGETS, 0x7ffdaf88d780)        = -1 ENOTTY (Inappropriate ioctl for device) <0.000010>
+ioctl(1, TIOCGWINSZ, 0x7ffdaf88d830)    = -1 ENOTTY (Inappropriate ioctl for device) <0.000012>
