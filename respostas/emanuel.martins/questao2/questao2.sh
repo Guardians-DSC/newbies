@@ -23,23 +23,31 @@ CPU_MIN=0
 MEM_MAX=0
 MEM_MIN=0
 
-while read line do
-  if $line -gt $CPU_MAX; then
-    CPU_MAX = $line
+while read line
+do
+  if [[ $line > $CPU_MAX ]];
+  then
+    CPU_MAX=$line
   fi
 
-  if $line -lt $CPU_MIN; then
-    CPU_MIN = $line
+  if [[ $line < $CPU_MIN ]];
+  then
+    CPU_MIN=$line
+  fi
+done < cpu.txt
+
+while read line
+do
+  if [[ $line > $MEM_MAX ]];
+  then
+    MEM_MAX=$line
   fi
 
-while read line do
-  if $line -gt $MEM_MAX; then
-    MEM_MAX = $line
+  if [[ $line < $MEM_MIN ]];
+  then
+    MEM_MIN=$line
   fi
-
-  if $line -lt $MEM_MIN; then
-    MEM_MIN = $line
-  fi
+done < mem.txt
 
 echo "Uso máximo e mínimo de cpu, respectivamente: $CPU_MAX | $CPU_MIN"
 echo "Uso máximo e mínimo de memória, respectivamente: $MEM_MAX | $MEM_MIN"
