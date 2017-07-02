@@ -9,10 +9,10 @@ gunzip jan_95.txt.gz
 # Gera um arquivo remote.txt apenas com os remotes válidos
 cat jan_95.txt | grep "remote - -" > remote.txt
 
-# Gera um arquivo local.txt apenas com os locales válidos
+# Gera um arquivo local.txt apenas com os locais válidos
 cat jan_95.txt | grep "local - -" > local.txt
 
-# Atribuo a quantidade de comandos de cada tipo de solicitação às respectivas variáveis
+# Atribuindo a quantidade de comandos de cada tipo de solicitação às variaveis
 removidas=`cat remote.txt | wc -l`
 locais=`cat local.txt | wc -l`
 
