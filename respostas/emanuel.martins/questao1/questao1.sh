@@ -6,7 +6,7 @@
 gzip -d jan_95.txt.gz
 
 # Descartando linhas indesejadas e colocando em novo arquivo.
-egrep -E '(local|remote) - -' jan_95.txt > file_filtered.txt
+grep -E '(local|remote) - -' jan_95.txt > file_filtered.txt
 
 # Contagem de ocorrências de cada tipo de requisição.
 LOCAL_REQUISITIONS=$(egrep -E '^local' file_filtered.txt | wc -l)
