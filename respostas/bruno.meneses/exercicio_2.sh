@@ -31,11 +31,11 @@ max_mem=$(tail -1 dadosMEM.txt)
 min_mem=$(head -1 dadosMEM.txt)
 
 # Exibindo resultados
-echo "--------------------------------------------"
-echo "CPU maximo: $max_cpu | CPU minimo: $min_cpu"
+echo "---------------------------------------------------"
+echo "CPU minimo: $min_cpu % | CPU maximo: $max_cpu %"
 echo
-echo "Memoria maxima: $max_mem | Memoria minima: $min_mem"
-echo "--------------------------------------------"
+echo "Memoria minima: $min_mem % | Memoria maxima: $max_mem %"
+echo "---------------------------------------------------"
 
 # Realizando limpeza dos arquivos
 rm dadosCPU.txt
