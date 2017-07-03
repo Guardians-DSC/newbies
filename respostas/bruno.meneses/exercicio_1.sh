@@ -15,9 +15,5 @@ requisicoes_locais=$(grep -c "local" requisicoes_validas.txt)
 requisicoes_remotas=$(grep -c "remote" requisicoes_validas.txt)
 
 # Resultado das requisicoes locais e remotas
-echo
-echo "Total de requisições:"
-echo
-echo "$requisicoes_locais requisições locais foram realizadas."
-echo "$requisicoes_remotas requisições remotas foram realizadas."
-echo
+echo "Requisições locais: $requisicoes_locais"
+echo "Requisições remotas: $requisicoes_remotas "
