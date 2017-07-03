@@ -15,7 +15,8 @@ read usuario
 # Coletando as informacoes do usuario informado e salvando em um arquivo txt
 for i in $(seq 1 $quant_obs)
 do
-	ps -u | grep $usuario >> dados.txt
+	ps aux | grep $usuario >> dados.txt
+
 	sleep $tempo
 done
 
@@ -38,6 +39,7 @@ echo "Memoria minima: $min_mem % | Memoria maxima: $max_mem %"
 echo "---------------------------------------------------"
 
 # Realizando limpeza dos arquivos
+rm dados.txt
 rm dadosCPU.txt
 rm dadosMEM.txt
-rm dados.txt
+
