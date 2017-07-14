@@ -88,9 +88,7 @@ getdents(3, /* 4 entries */, 32768)     = 112 <0.000023>
 getdents(3, /* 0 entries */, 32768)     = 0 <0.000015>
 close(3)                                = 0 <0.000017>
 fstat(1, {st_mode=S_IFREG|0644, st_size=7124, ...}) = 0 <0.000009>
-write(1, "ls.log\nREADME\n", 14ls.log
-README
-)        = 14 <0.000012>
+write(1, "ls.log\nREADME\n", 14ls.log README) = 14 <0.000012>
 close(1)                                = 0 <0.000008>
 close(2)                                = 0 <0.000008>
 exit_group(0)                           = ?
