@@ -5,7 +5,7 @@ processos em execução no sistema operacional. Em sistemas Linux **TUDO** são 
 ferramenta como essa permite que você exiba informações sobre determinados usuários, processos, mostre 
 apenas tráfego para determinados protocolos de rede, identificadores de arquivos e muito mais.
 
-Aqui abaixo encontra-se um exemplo de saída produzida ao executar esse comando no terminal:
+Aqui abaixo encontra-se um exemplo de um _pequeno trecho_ da saída produzida ao executar esse comando no terminal:
 
 
 ```
@@ -34,12 +34,12 @@ systemd     618                 darklyn    2u     unix   0xffff8817572bfc00     
 systemd     618                 darklyn    3u     unix   0xffff8817600d0400        0t0      16271 type=DGRAM
 ```
 
-São vistas informações relevantes como o processo, PID, usuário, tipo, tamanho e nome do arquivo.
+São vistas informações relevantes como o _processo, PID, usuário, tipo, tamanho_, _nome do arquivo_ e etc.
 
-Você deve fazer um progrma que dado a saída do comando `lsof` filtre as conexões que sejam UDP 
-ou TCP (internet) e exiba os dois processos que mais fizeram conexões desse tipo, respectivamente.
+Você deve fazer um progrma que dado a saída do comando `lsof` filtre as conexões que sejam **UDP**
+ou **TCP** (internet) e exiba os dois processos que _mais_ fizeram conexões desse tipo, respectivamente.
 
-Bônus: Exiba as informações como a quantidade total de conexões TCP que estão em estado LISTEN, ESTABLISHED, SYN_SENT e CLOSE_WAIT.
+**Bônus:** Exiba as informações como a quantidade total de conexões TCP que estão em estado _LISTEN, ESTABLISHED, SYN_SENT e CLOSE_WAIT_.
 
 ## Exemplo de execução
 
