@@ -18,10 +18,14 @@ Forneça saídas para cada caso em que a senha seja "segura" ou não.
 Exemplos de execução:
 ---------------------
 
-<code>$ bash senha.sh<br>
-Entre com a senha:<br>
-Senha insegura! `<detalhe_do_problema>` </code>
+```
+$ bash senha.sh
+Entre com a senha:
+Senha insegura! <detalhe_do_problema>
+```
 
-<code>$ bash senha.sh<br>
-Entre com a senha:<br>
-Senha segura! :)</code>
+```
+$ bash senha.sh
+Entre com a senha:
+Senha segura! :)
+```
