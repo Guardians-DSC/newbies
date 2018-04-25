@@ -1,0 +1,3 @@
+Intel(R) Core(TM) i7-2600 CPU @ 3.40GHz
+Intel Corporation 82579LM Gigabit Network Connection (rev 05)
+7857024 kB
