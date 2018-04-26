@@ -14,3 +14,5 @@ Boa sorte, aventureiro.
 **May The 4th be with you!**
 
 **P.S**: conteúdo útil [aqui](https://drive.google.com/drive/folders/0B_GydWLdj9t-OHY1RjJXeWllUEU).
+
+**P.S.2**: conteúdo sobre Regex [aqui](https://aurelio.net/regex/apostila-conhecendo-regex.pdf).
