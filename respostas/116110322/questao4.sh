@@ -2,7 +2,7 @@
 
 echo "Digite sua senha:"
 
-read senha
+read -s senha
 
 if echo "${senha}" | grep '[0-9]' >/dev/null; then
 	if [[ $senha =~ [A-Z] ]]; then
