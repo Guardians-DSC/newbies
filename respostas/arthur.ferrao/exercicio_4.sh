@@ -1,23 +1,24 @@
 #!/bin/bash
 
-REGEX="[A-Z]{1,}"
-REGEX2="[1-9]{1,}"
+regexMaiusculas="[A-Z]{1,}"
+regexNumeros="[1-9]{1,}"
+regexLetras="[a-zA-Z]{1,}"
 echo "Entre com a senha:"
 read senha
 if [ ${#senha} -lt 8 ];
    then
-      echo "Senha insegura!"
+      echo "Senha insegura! <Minimo de 8 caracteres.>"
    else
-      if [[ "$senha" =~ ${REGEX} ]];
+      if [[ "$senha" =~ ${regexLetras} && "$senha" =~ ${regexNumeros} ]];
          then
-            if [[ "$senha" =~ ${REGEX2} ]];
+            if [[ "$senha" =~ ${regexMaiusculas} ]];
                then
                   echo "Senha segura!"
                else
-                  echo "Senha insegura!"
+                  echo "Senha insegura! <Deve conter pelo menos uma letra maiuscula.>"
             fi
          else
-            echo "Senha insegura!"
+            echo "Senha insegura! <Deve conter letras e numeros.>"
       fi
 fi
 
