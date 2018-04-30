@@ -5,9 +5,9 @@ comando=$(ls -l | cut -d" " -f1 | egrep [a-z-]{8}w | wc -l)
 
 if [ $comando = 0 ];
    then
-      echo 'ok'
+      echo 'DIRETORIO SEGURO'
    else
-      echo 'no'
+      echo 'DIRETORIO INSEGURO'
 fi
 
 

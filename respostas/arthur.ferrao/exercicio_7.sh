@@ -1,6 +1,6 @@
 #!/bin/bash
 
-modelName=$(cat /proc/cpuinfo | grep 'model name' | grep -n ^ | grep ^1 | cut -d: -f3 | sed 's/ //')
+modelName=$(cat /proc/cpuinfo | grep 'model name' | uniq | cut -d: -f2 | sed 's/ //')
 ethernet=$(lspci | grep 'Ethernet controller' | cut -d: -f3 | sed 's/ //')
 memTotal=$(cat /proc/meminfo | grep 'MemTotal' | awk '{print $2 $3}')
 textoBase="$modelName\n$ethernet\n$memTotal"
