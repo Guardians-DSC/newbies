@@ -1,4 +1,4 @@
-#!bin/sh
+#!/bin/bash
 max_tcp=0
 process_TCP=''
 max_udp=0
