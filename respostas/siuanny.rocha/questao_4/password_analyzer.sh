@@ -12,8 +12,8 @@
   culas, minúsculas e números.
 DESCRICAO
 
-# Informa os motivos pelos quais a sen-
-# ha inserida não é  segura e o que de-
+# Informa  os motivos pelos quais a  se-
+# nha inserida não é  segura e o que de-
 # ve possuir para que seja.
 function informacoes() {
   emoticon=$1; definicao=$2
