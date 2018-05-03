@@ -2,7 +2,7 @@
 # Autor: Eduardo Henrique Pontes Silva0
 # Matrícula: 117210360
 # Login_CCC: eduardo.henrique.silva
-# Script: Exercício 4
+# Script: Exercício 5
 
 # Inicialização do Script
 echo  "====== TOP ====="
