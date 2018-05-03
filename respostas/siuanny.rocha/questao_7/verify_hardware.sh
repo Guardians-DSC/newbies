@@ -34,5 +34,5 @@ if ! [ -e ".arquivo_base.txt" ]; then
 elif [[ `md5sum -c .hash.md5 2> /dev/null | grep "SUCESSO"` ]]; then
   echo "SEM ALTERACOES"
 else
-  echo -e "SISTEMA ALTERADO!!!"
+  echo "SISTEMA ALTERADO!!!"
 fi
