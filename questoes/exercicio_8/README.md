@@ -21,7 +21,8 @@ No qual ```date``` representa a data e hora de quando um certo erro ocorreu, ```
 Faça um programa que receba um ano por parâmetro e responda quantos arquivos foram impressos e quantos bytes foram transmitidos (no ano específico).
 
 ### Exemplo de execução (valores incorretos):
-```$ bash analyze_access.sh 2017
+```
+$ bash analyze_access.sh 2017
 Quantidade de arquivos impressos em 2017: 102
 Quantidade de bytes transimitidos em 2017: 304568 bytes
 ```
