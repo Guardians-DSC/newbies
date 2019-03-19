@@ -20,7 +20,7 @@ No qual ```date``` representa a data e hora de quando um certo erro ocorreu, ```
 ## Problema 1:
 Faça um programa que receba um ano por parâmetro e responda quantos arquivos foram impressos e quantos bytes foram transmitidos (no ano específico).
 
-### Exemplo de execução (valores incorretos):
+### Exemplo de execução (valores ilustrativos):
 ```
 $ bash analyze_access.sh 2017
 Quantidade de arquivos impressos em 2017: 102
@@ -28,9 +28,9 @@ Quantidade de bytes transimitidos em 2017: 304568 bytes
 ```
 
 ## Problema 2:
-Faça um problema que leia o error.log e calculo qual o número médio de erros por ano.
+Faça um problema que leia o error.log e calcule qual o número médio de erros por ano.
 
-### Exemplo de execução (valores incorretos):
+### Exemplo de execução (valores ilustrativos):
 ```
 $ bash analyze_errors.sh
 Média de falhas por ano: 250
