@@ -5,6 +5,8 @@ Por exemplo, é comum que um administrador de sistemas precise verificar logs a 
 
 No diretório deste exercício, existem dois arquivos ```access.log``` e ```error.log``` compactados em um arquivo chamado ```log.tar.gz```. Eles correspodem aos registros de um serviço de impressão.
 
+Primeiramente, para visualizar os logs, descompacte o arquivo compactado.
+
 Cada linha do arquivo access.log tem o seguinte formato:
 
 ```[date] bytes command```
