@@ -1,8 +1,8 @@
 # Questão 10
 
-Todos os usuários dos LCCs possuem um limite máximo de espaço em disco que seus arquivos podem ocupar nos laboratórios (o que chamamos de *cota*).
+Todos os usuários dos LCCs possuem um limite máximo de espaço em disco que seus arquivos podem ocupar nos laboratórios (o que chamamos de **cota**).
 
-Dado um diretório *passado como parâmetro*, forneça um script que imprima um relatório de espaço em disco ocupado e o caminho (absoluto) de diretórios abaixo da raiz do diretório passado como parâmetro, e que atendam às seguintes características:
+Dado um diretório **passado como parâmetro**, forneça um script que imprima um relatório de espaço em disco ocupado e o caminho (absoluto) de diretórios abaixo da raiz do diretório passado como parâmetro, e que atendam às seguintes características:
 
 ```
 a) diretórios cujo espaço em disco ocupado não exceda 10MB
@@ -13,7 +13,7 @@ d) diretórios cujo espaço em disco ocupado exceda 10MB e não exceda 200MB
 
 Formate sua saída de forma a imprimir os caminhos absolutos e características especificadas para cada quesito acima.
 
-*Importante*: seu script deve avaliar e imprimir diretórios em 2 níveis de profundidade (não menos e não mais que isso) abaixo do diretório passado como parâmetro.
+**Importante**: seu script deve avaliar e imprimir diretórios em 2 níveis de profundidade (não menos e não mais que isso) abaixo do diretório passado como parâmetro.
 
 ## Exemplo de execução:
 
@@ -56,4 +56,4 @@ Diretórios que excedem 10MB e não excedem 200MB:
     60M       /home/guardians/eclipse-workspace
 ```
 
-A ordem de impressão dos diretórios não importa, mas você terá um *bônus* se optar por ordenar pelo espaço ocupado de forma descrescente. Lembre-se que, em todos os casos, os diretórios devem ser impressos com o caminho absoluto (e.g.: `./eclipse-workspace` é um caminho relativo, `/home/guardians/eclipse-workspace` é um caminho absoluto).
+A ordem de impressão dos diretórios não importa, mas você terá um **bônus** se optar por ordenar pelo espaço ocupado de forma descrescente. Lembre-se que, em todos os casos, os diretórios devem ser impressos com o caminho absoluto (e.g.: `./eclipse-workspace` é um caminho relativo, `/home/guardians/eclipse-workspace` é um caminho absoluto).
