@@ -1,4 +1,4 @@
-# Questão 10
+# Questão 9
 
 Todos os usuários dos LCCs possuem um limite máximo de espaço em disco que seus arquivos podem ocupar nos laboratórios (o que chamamos de **cota**).
 
