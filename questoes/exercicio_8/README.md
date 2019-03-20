@@ -1,4 +1,4 @@
-# Questão 9
+# Questão 8
 Logs são arquivos que, em geral, registram as diversas operações e informações úteis  que foram executadas ou geradas por um sistema específico, como por exemplo mensagens de erro provenientes de uma aplicação, informação de quem solicitou acesso à uma coisa X, etc.
 
 Por exemplo, é comum que um administrador de sistemas precise verificar logs a fim de extrair dados cruciais sobre um execução passada de um sistema: seja por motivos de segurança, correção de erros ou outros.
