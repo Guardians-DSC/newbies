@@ -3,7 +3,7 @@
 #Joao Pedro de Barros Barbosa, 117210327
 #joao.pedro.barbosa
 
-loc=$(pwd)
+loc="${1:-$(pwd)}"
 
 echo
 echo "========================================================="
