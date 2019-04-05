@@ -1,4 +1,6 @@
 #!/bin/bash
+# Rennan Rocha de Freitas - 119110746
+# exercicio_8 problema 1
 
 if [ $# -lt 1 ];
 then
@@ -6,32 +8,23 @@ then
 	exit
 fi
 
-ano=$1
-
 tar -vzxf ../../questoes/exercicio_8/log.tar.gz > /dev/null #descompactar arquivos log
 
-ano_impressos=0
-ano_bytes=0
+ano=$1
 
+acessos_ano=$(cat access.log | grep /$ano)
+qtd_impressos=$(cat access.log | grep /$ano | grep Send-Document | wc -l)
+
+echo "Quantidade de arquivos impressos em $ano: $qtd_impressos"
+echo -e "\nCalculando bytes transmitidos...\n"
+
+bytes_transm=0
 while read line; do
-	data=$(echo $line | cut -f1 -d' ')
-	data_ano=$(echo $data | cut -f1 -d':' | cut -f3 -d'/' )
+	bytes=$(echo $line | cut -f2 -d' ')
+	bytes_transm=$(($bytes_transm + $bytes))	
+done <<< "$acessos_ano"
 
-	if [ $data_ano -eq $ano ];
-	then
-		bytes=$(echo $line | cut -f2 -d' ')
-		ano_bytes=$(($ano_bytes + $bytes))
-		
-		comando=$(echo $line | cut -f3 -d' ')	
-		if [ $comando = "Send-Document" ];
-		then
-			ano_impressos=$(($ano_impressos + 1))
-		fi
-	fi	
-done < access.log
-
-echo "Quantidade de arquivos impressos em $ano: $ano_impressos"
-echo "Quantidade de bytes transmitidos em $ano: $ano_bytes"
+echo "Quantidade de bytes transmitidos em $ano: $bytes_transm"
 
 rm access.log
 rm error.log
