@@ -8,8 +8,8 @@ tar -xf log.tar.gz
 year=$1
 
 echo -ne "Quantidade de arquivos impressos em $year: "
-cat access.log | grep $year | grep -c "Send-Document"
+cat access.log | grep $year: | grep -c "Send-Document"
 echo -ne "Quantidade de bytes transimitidos em $year: "
-cat access.log | grep $year | awk '{ SUM += $2 } END {print SUM " bytes"}'
+cat access.log | grep $year: | awk '{ SUM += $2 } END {print (SUM + 0) " bytes"}'
 
 rm *.log
