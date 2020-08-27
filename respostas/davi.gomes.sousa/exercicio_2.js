@@ -36,7 +36,7 @@ async function main() {
   let maxCpu = -Infinity, minCpu = Infinity;
   let maxMem = -Infinity, minMem = Infinity;
 
-  // A cada S segundos obtém as informações do usuário
+  // N vezes, a cada S segundos obtém as informações do usuário
   // e atualiza os máximos e mínimos
   for (let i = 0; i < N; i++) {
     await sleep(S);
