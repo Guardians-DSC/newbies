@@ -20,7 +20,7 @@ let local = 0, remote = 0;
 lines.forEach((line) => {
   if (line.startsWith('local')) local++;
   else if (line.startsWith('remote')) remote++;
-})
+});
 
 console.log(`Foram feitas ${local} requisições locais!`);
 console.log(`Foram feitas ${remote} requisições remotas!`);
