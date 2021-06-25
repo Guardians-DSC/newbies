@@ -1,0 +1,54 @@
+#!/bin/bash
+
+read N S P_USER
+# N: número de checagens, S: tempo entre cada checagem, P_USER: início do nome de um usuário
+
+# A cada S segundos o programa deve executar um ps aux ou comando parecido
+echo "" > usuario.txt
+
+for n in $(seq 1 $N) #	o comando "seq a b" cria uma lista de números de "a" a "b"
+do
+	# TESTE 1:
+       	#	Encaminhar todos os processos do usuário em questão a um arquivo .txt
+	# Sempre que for necessário encaminhar a saída de qualquer comando a um arquivo, se usa ">"
+		# comando > arquivo
+	# No caso de não existir o arquivo, ">" cria um novo arquivo com o nome
+	# Se um arquivo de mesmo nome existir, ">" sobrescreve esse arquivo
+	echo "-----------------------------------------" >> usuario.txt
+	ps aux | grep $P_USER >> usuario.txt
+	# usamos >> para concatenar
+done
+
+#	Resolução definitiva
+echo "" > memoria.txt
+echo "" > cpu.txt
+
+for n in $(seq 1 $N)
+do
+	ps -eo %cpu,user | grep $P_USER >> cpu.txt
+	#echo "--------------------------" >> cpu.txt
+
+	ps -eo %mem,user | grep $P_USER >> memoria.txt
+	#echo "--------------------------" >> memoria.txt
+done
+	# ps é um comando que lista uma seleção de processos ativos
+	# Por padão, ps seleciona todos os processos com o mesmo usuário que invoca o comando
+	# ps -e lista todos os processos, seleciona todos os processos
+	# ps -o [format] é uma opção de formatação; o [format] deve ser substituído por especificadores de formatação
+       	# 	Quando usamos 
+	#		ps -eo %mem,user
+	#	estamos dizendo "mostre todos os processos (ps -e) com as seguintes especificações (ps -o): memória e usuário (%mem,user), nessa ordem"
+
+# Ordenar os dados obtidos para selecionar as porcentagens máximas e mínimas
+# Para ordenar, podemos usar o comando sort
+	# Para ordenar em sentido inverso, sort -rn
+cpu_min=`sort cpu.txt | cut -c1-4 | head -n 2`
+cpu_max=`sort -rn cpu.txt | cut -c1-4 | head -n 1`
+mem_min=`sort memoria.txt | cut -c1-4 | head -n 2`
+mem_max=`sort -rn memoria.txt | cut -c1-4 | head -n 1`
+
+echo "CPU% mínima: $cpu_min"
+echo "CPU% máxima: $cpu_max"
+echo "MEM% mínima: $mem_min"
+echo "MEM% máxima: $mem_max"
+
