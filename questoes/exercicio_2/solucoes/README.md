@@ -2,8 +2,7 @@
 
 Sobre Loops:
 [Bash for loop](https://imasters.com.br/desenvolvimento/bash-for-loop-primeiro-passo-na-automacao-no-linux)
-
-[Loops](https://tldp.org/LDP/abs/html/loops1.html)
+| [Loops](https://tldp.org/LDP/abs/html/loops1.html)
 
 Sobre comando ps:
 [ps Manual Page](https://man7.org/linux/man-pages/man1/ps.1.html)
