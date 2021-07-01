@@ -9,4 +9,4 @@ Sobre comando ps:
 | [ps command in Linux with Examples](https://www.geeksforgeeks.org/ps-command-in-linux-with-examples/#:~:text=Linux%20provides%20us%20a%20utility,information%20depends%20on%20different%20options.)
 
 Sobre comando cut:
-[cut commando in Linux with examples](https://www.geeksforgeeks.org/cut-command-linux-examples/)
+[cut command in Linux with examples](https://www.geeksforgeeks.org/cut-command-linux-examples/)
