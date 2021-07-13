@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Guardians - DSC</title>
+<link rel="stylesheet" type="text/css" href="questoes.css" media="screen" />
+</head>
+<body>
+<h><a href="index.html">Shell Scripting</a></h>
+<h1>Exercício 1</h1>
+<div>
+    Escreva um programa em Shell Script que:
+    <ol>
+        <li>Descompacte o arquivo jan_95.txt.gz.</li>
+        <li>Considere que o formato do arquivo é como se segue: ORIGEM - - DATA “AÇÃO” STATUS TAMANHO</li>
+    </ol>
+    Onde ORIGEM pode ser local ou remote, a data é no formato DD/Mon/YYYY:HH:MM:SStz a ação é um comando HTTP,
+    o Status é um código de resultado e o tamanho é o tamanho da requisição (ou - quando não existir).
+
+    <p>A linha abaixo Representa uma requisição local realizado no dia 24 de Outubro de 1994 para pegar 
+    o arquivo 1.gif no servidor. O resultado (200) representa sucesso para baixar 1210 bytes:</p>  
+
+    <ul>
+        local - - [24/Oct/1994:13:47:19 -0600] "GET 1.gif HTTP/1.0" 200 1210
+    </ul>
+
+    <p>Sua primeira atividade é descartar as linhas que tem nenhum ou apenas um traço depois de remote ou de local.</p>
+    <p>Exemplo, as linhas abaixo devem ser DESCARTADAS:</p>
+
+    <ul>local - [01/Feb/1995:14:46:36 -0700] "GET /images/gtr.gif 1350.0" 200 36403</ul>
+    <ul>local index.html</ul>
+
+    Em seguida, processe os dados da filtragem e ache:
+    <ul>
+        <li>quantas requisições locais foram feitas</li>
+        <li>quantas requisições remotas foram feitas</li>
+    </ul>
+
+</div>
+
+<h4>Resoluções comentadas</h4>
+<h4>Demais resoluções</h4>
+</body>
+</html>
+
