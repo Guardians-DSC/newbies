@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Guardians - DSC</title>
+<link rel="stylesheet" type="text/css" href="questoes.css" media="screen" />
+</head>
+<body>
+<h><a href="index.html">Shell Scripting</a></h>
+<h1>Exercício 7</h1>
+<div>
+    Todo administrador de sistema precisa se basear em ferramentas para acompanhar o iventário de suas máquinas. 
+    Por exemplo, é importante garantir que não houve alterações no hardware das máquinas entre duas datas distintas.
+
+    <p>Para isso, faça um programa que pegue informações do sistema e gere uma base de referência 
+        com a descrição do modelo da CPU (ver o campo model name do arquivo /proc/cpuinfo), da placa de rede 
+        (ver o campo Ethernet controller da saída do comando lspci) e total de memória disponível 
+        (ver o campo MemTotal do arquivo /proc/meminfo).
+    </p>
+
+    <p>Por exemplo, o arquivo base.txt poderia ter como conteúdo:</p>
+    <pre>
+        Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz
+        Intel Corporation 82579LM Gigabit Network Connection (rev 04)
+        8048104 kB    
+    </pre>
+
+    <p>Após criado o arquivo de base, a cada execução do programa, você deve detectar se houve, ou não, alguma alteração na especificação do sistema.</p>
+
+    <h3>Exemplo de execução</h3>
+    
+    <pre>
+        $ bash especificacao.sh
+        ARQUIVO BASE CRIADO
+        $ bash especificacao.sh
+        SEM ALTERACOES
+        $ bash especificacao.sh
+        SEM ALTERACOES
+        # digamos que aqui eu tire um pente de memoria
+        $ bash especificacao.sh
+        SISTEMA ALTERADO
+
+    </pre>
+    
+
+</div>
+<p>&ensp;</p>
+
+
+
+<h4><a href="solucoesAvulsas/r7.html">Resolução comentada</a></h4>
+<h4><a href="https://github.com/Guardians-DSC/newbies/tree/master/respostas">Demais resoluções</a></h4>
+</body>
+</html>
