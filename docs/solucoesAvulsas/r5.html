@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Guardians - DSC</title>
+<link rel="stylesheet" type="text/css" href="../questoes.css" media="screen" />
+</head>
+<body>
+<h><a href="../index.html">Shell Scripting</a></h>
+<h1><a href="../q5.html">Exercício 5</a></h1>
+
+<h4>Solução &ensp;<a href="../../resolucoes_comentadas/exercicio_5/solucao1.sh">(Arquivo .sh)</a></h4>
+
+<div>
+    <pre>
+        #!/bin/bash
+
+        # Por Lucas Salustiano
+
+        # Primeiramente,desejamos isolar os processos com conexões TCP e UDP. O comando `lsof` listará os descritores de 
+        # arquivos abertos para esses dois protocolos, como mencionado no enunciado.
+        #
+        # Em seguida, o comando `grep` filtrará ambos os protocolos e o comando `sort` se encarregará de ordenar os 
+        # processos por ordem alfabética.
+
+        TCP=$(lsof | grep TCP | sort -k 1)
+        UDP=$(lsof | grep UDP | sort -k 1)
+
+        # Nas duas linhas abaixo contém os pipes que serão responsáveis pela contagem e escolha do processo com maior
+        # número de conexões nos respectivos protocolos. Ocorre o seguinte:
+        #
+        # Primeiro listamos todos os processos relacionados a cada um dos protocolos, isso é feito através do comando `echo`.
+        # Após isso selecionamos somente o nome de cada processo, isso é feito através do comando `awk`.
+        # Em seguida contamos o número de ocorrências do nome de cada processo e ordenamos de forma decrescente afim de 
+        # selecionarmos os processos com maior número de ocorrências. Isso é feito através dos comandos `uniq`, `sort`,
+        # e `head` respectivamente.
+        # Com isso, até agora temos uma saída da forma: NUM_OCORRENCIAS NOME_PROCESSO. Precisamos somente do nome do processo,
+        # por isso o comando `awk` foi usado mais uma vez para imprimir somente o nome do processo.
+
+        TOP_TCP=$(echo "${TCP}" | awk '{print $1}' | uniq -c | sort -gr | head -n 1 | awk '{print $2}')
+        TOP_UDP=$(echo "${UDP}" | awk '{print $1}' | uniq -c | sort -gr | head -n 1 | awk '{print $2}')
+
+        # Agora queremos contar quantos processos se encontram em cada um dos estados de conexão TCP. Para isso vamos listar
+        # todos os processos com conexão TCP, filtraremos os processos de acordo com o estado da conexão TCP e após isso 
+        # fazemos uma contagem para cada filtragem. Com isso, para cada estado de conexão TCP, teremos o número de processos
+        # associados a cada estado.
+
+        LISTEN=$(echo "${TCP}" | grep LISTEN | wc -w)
+        STABLISHED=$(echo "${TCP}" | grep STABLISHED | wc -w)
+        SYN_SENT=$(echo "${TCP}" | grep SYN_SENT | wc -w)
+        CLOSE_WAIT=$(echo "${TCP}" | grep CLOSE_WAIT | wc -w)
+
+        # Modelo de saída sugerida.
+
+        echo "====== TOP ======"
+        echo "TOP conexões UDP:"
+        echo "* ${TOP_UDP}"
+        echo "TOP conexões TCP:" 
+        echo "* ${TOP_TCP}"
+        echo
+        echo "====== TCP ======"
+        echo "LISTEN: ${LISTEN}"
+        echo "ESTABLISHED: ${STABLISHED}"
+        echo "SYN_SENT: ${SYN_SENT}"
+        echo "CLOSE_WAIT: ${CLOSE_WAIT}"
+
+        # Sucesso.
+
+        exit 0
+    </pre>
+</div>
+
+
+</body>
+</html>

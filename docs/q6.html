@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Guardians - DSC</title>
+<link rel="stylesheet" type="text/css" href="questoes.css" media="screen" />
+</head>
+<body>
+<h><a href="index.html">Shell Scripting</a></h>
+<h1>Exercício 6</h1>
+<div>
+    Uma das atividades mais rotineiras do administrador de sistemas é a de garantir a segurança do sistema. Dentre os aspectos a serem observados está a proteção dos arquivos dos usuários.
+
+    <p>Uma das maneiras de ver as permissões dos arquivos do usuário está em fazer uma listagem completa dos arquivos com o comando ls -l. Uma saída como -rw-r--r-- significa que o arquivo pode ser lido e escrito pelo usuário, 
+        que pode ser lido pelos usuários do mesmo grupo e que também pode ser lido por todos os usuários do sistema.</p>
+
+    <p>Faça um script que verifique se nenhum arquivo de um diretório pode ser escrito por outros usuários, ou seja, se as permissões NÃO terminam em -w-, rw-, -wx ou rwx. Se nenhum arquivo tiver essas permissão, imprima a mensagem "DIRETORIO SEGURO". Caso contrário, imprima "DIRETORIO INSEGURO".
+    </p>
+
+    <p>Você pode analisar a saída do próprio ls para verificar tais permissões ou usar aplicações como o find para fazer essa verificação.
+    </p>
+
+    <h3>Exemplos de execução</h3>
+    No exemplo abaixo, o arquivo.txt pode ser escrito pelo próprio usuários ou por usuários 
+    do mesmo grupo mas não pelos demais usuários do sistema (permissão não termina em w).
+    <pre>
+        $ ls -l
+        total 8
+        -rw-rw---- 1 matheusgr matheusgr    6 Apr 23 10:09 arquivo.txt
+        drwxr-x--- 2 matheusgr matheusgr 4096 Apr 23 10:09 diretorio
+        $ bash seguro.sh
+        DIRETORIO SEGURO
+    </pre>
+    No exemplo abaixo, é possível observar que o arquivo.txt pode ser escrito por todos os usuários do sistema.
+    <pre>
+        $ ls -l
+        total 8
+        -rw-rw-rw- 1 matheusgr matheusgr    6 Apr 23 10:09 arquivo.txt
+        drwxr-x--- 2 matheusgr matheusgr 4096 Apr 23 10:09 diretorio
+        $ bash seguro.sh
+        DIRETORIO INSEGURO
+    </pre>
+
+</div>
+<p>&ensp;</p>
+
+<h4>Links úteis</h4>
+<ul><a href="https://www.tecmint.com/15-basic-ls-command-examples-in-linux/">
+    Sobre o comando ls</a>
+</ul>
+<ul>Sobre o comando find:
+    <li><a href="https://www.tecmint.com/35-practical-examples-of-linux-find-command/">
+        35 practical examples of Linux find command</a>
+    </li>
+    <li><a href="https://www.geeksforgeeks.org/find-command-in-linux-with-examples/#:~:text=The%20find%20command%20in%20UNIX,modification%20date%2C%20owner%20and%20permissions.">
+        find command in Linux with examples </a>
+    </li>
+    <li><a href="https://tutonics.com/2012/12/find-files-based-on-their-permissions.html">
+        Find files based on theis permissions</a>
+    </li>
+</ul>
+<ul>Sobre permissão de arquivos:
+    <li><a href="https://www.guru99.com/file-permissions.html">
+        File Permissions in Linux</a>
+    </li>
+    <li><a href="https://linuxcommand.org/lc3_lts0090.php">
+        Permissions</a></li>
+</ul>
+
+
+<p>&ensp;</p>
+
+<h4><a href="solucoesAvulsas/r6.html">Resolução comentada</a></h4>
+<h4><a href="https://github.com/Guardians-DSC/newbies/tree/master/respostas">Demais resoluções</a></h4>
+</body>
+</html>
