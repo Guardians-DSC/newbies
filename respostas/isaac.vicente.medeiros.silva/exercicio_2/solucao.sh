@@ -1,4 +1,6 @@
 #/usr/bin/env bash
+#
+# Por Isaac Vicente em 28 Mar 2023
 
 read -p "Número de observações: " n_obs
 read -p "Intervalo de tempo (em seg): " tempo

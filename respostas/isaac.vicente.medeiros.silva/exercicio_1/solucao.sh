@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+#
+# Por Isaac Vicente em 28 Mar 2023
 
 # Pegamos o output apenas das linhas que têm o regex desejado
 # no arquivo `jan_95.txt` esse conteúdo com o pipe
