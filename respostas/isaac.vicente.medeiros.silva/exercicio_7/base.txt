@@ -1,0 +1,3 @@
+AMD Ryzen 3 3250U with Radeon Graphics
+Realtek Semiconductor Co., Ltd. RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller (rev 15)
+6007768 kB
